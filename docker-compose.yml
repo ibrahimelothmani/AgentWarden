@@ -1,0 +1,24 @@
+services:
+  agentwarden:
+    build: .
+    image: agentwarden:latest
+    ports:
+      - "8080:8080"
+    environment:
+      WARDEN_CONFIG: /app/warden.yaml
+      WARDEN_ADDR: ":8080"
+      # Mounting the host's Docker socket lets AgentWarden spin up sandbox
+      # containers for Phase 2 (dynamic execution). This is the standard
+      # "Docker-out-of-Docker" pattern. On most Linux hosts the socket is
+      # group-owned by `docker`; if you hit permission errors, add a
+      # matching `group_add` entry below with your host's docker GID.
+      WARDEN_DOCKER_SOCKET: /var/run/docker.sock
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:rw
+      - ./warden.yaml:/app/warden.yaml:ro
+    healthcheck:
+      test: ["CMD", "/app/agentwarden", "-version"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+    restart: unless-stopped

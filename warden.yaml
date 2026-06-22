@@ -1,0 +1,11 @@
+version: "1.0"
+policies:
+  security:
+    allow_network_ingress: false
+    forbidden_packages:
+      - "unsafe-eval"
+      - "crypto-miner"
+    max_file_deletions: 3
+  infrastructure:
+    allowed_aws_regions: ["us-east-1", "eu-west-1"]
+    prevent_destructive_changes: true

@@ -1,0 +1,35 @@
+# Go build artifacts
+bin/
+dist/
+*.exe
+*.test
+*.out
+coverage.txt
+
+# Environment / secrets
+.env
+.env.local
+*.env
+*.pem
+*.key
+*.cert
+credentials*
+secrets*
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Web dashboard
+web/node_modules/
+web/dist/
+web/.vite/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker socket (never check these in)
+*.sock
