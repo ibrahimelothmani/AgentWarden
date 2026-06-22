@@ -1,10 +1,6 @@
 <div align="center">
   <h1>🛡️ AgentWarden</h1>
   <p><strong>The GitOps Guardrail & Secure Sandbox for Autonomous AI Agents</strong></p>
-
-  [![GitHub License](https://img.shields.io/github/license/ibrahimelothmani/AgentWarden?style=flat-square)](LICENSE)
-  [![GitHub Stars](https://img.shields.io/github/stars/ibrahimelothmani/AgentWarden?style=flat-square)](https://github.com/ibrahimelothmani/AgentWarden/stargazers)
-  [![Docker Pulls](https://img.shields.io/docker/pulls/ibrahimelothmani/agentwarden?style=flat-square)](https://hub.docker.com/r/ibrahimelothmani98/agentwarden)
 </div>
 
 ---
