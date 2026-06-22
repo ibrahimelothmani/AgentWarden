@@ -19,7 +19,7 @@ As AI agents move from writing simple scripts to autonomously committing code, r
 
 ### Demo
 
-<video src="docs/rcording.webm" controls width="800"></video>
+<video src="docs/rcording.mp4" controls width="800"></video>
 
 ---
 
